@@ -8,9 +8,9 @@
     completely filled address
     partially filled address
 6. UI
-    submitting a country to get the format
-    country-specific format
-    submitting an address to get a list of addresses
+    * submitting a country to get the format
+    * country-specific format
+    * submitting an address to get a list of addresses
 
 ## requirements to run
 * `Python 3.10.*` for Case/Switch feature
