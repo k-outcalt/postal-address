@@ -1,4 +1,14 @@
 # postal-address
+## TODO
+1. create cached country-specific address formats for required countries (can use regex for address validation)
+2. test address validation for the required countries
+3. download irl addresses or create fake ones
+4. wrap this in a MongoDB collection
+5. work on searching by address
+    completely filled address
+    partially filled address
+6. UI
+
 ## requirements to run
 * `Python 3.10.*` for Case/Switch feature
 * `Flask 2.*` for server 
