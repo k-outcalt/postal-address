@@ -1,0 +1,19 @@
+{
+    "type":"Feature",
+    "properties": {
+        "hash":"a61bdd50a9646a04",
+        "number":"119",
+        "street":"NW  41ST ST",
+        "unit":"",
+        "city":"SEATTLE",
+        "district":"KING",
+        "region":"",
+        "postcode":"98107",
+        "id":"324731.0"
+    },
+    "geometry": {
+        "type":"Point",
+        "coordinates":[-122.3580529,47.6561133]
+    }
+}
+    
