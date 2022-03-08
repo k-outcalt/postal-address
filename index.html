@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>International Address Search</title>
+</head>
+<body>
+    <h2 id="loading">Loading...</h2>
+
+    <div id="insert_form" style="display:none; width: 40%;">
+        <h2>Search or Create a New Address</h2>
+        <div id="fields">
+            <b>Country</b><br>
+            <select id="Country" style="margin-top: 10px;"></select>
+            <div id="dynamic_fields" style="margin-top: 10px;"></div>
+        </div>
+        <div>
+            <button id="search">Search</button>
+            <button id="create">Create</button>
+        </div>
+    </div>
+
+    <div id="response" style="margin-top:50px; width:25%;"></div>
+
+    <!-- Load JS files -->
+    <script src="./jquery.min.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>
