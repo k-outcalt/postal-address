@@ -13,7 +13,7 @@ from socket import AddressInfo
 import transform
 import pymongo
 
-RAW_ADDRESSES = 'br_rj_rio_de_janeiro-addresses-city.geojson'
+RAW_ADDRESSES = 'kr_41_provincewide-addresses-state.geojson'
 MONGO_CONNECTION_STR = ''
 ADDR_LIMIT = 1500
 
@@ -24,7 +24,7 @@ def test_hash(limit=10):
             item = json.loads(line)
             #print(item)
 
-            addr = transform.create_hash_CA_BC(item)
+            addr = transform.create_hash_KR_41(item)
             
             print(addr)
             count += 1
@@ -43,7 +43,7 @@ def populate_cluster(limit):
     with open(RAW_ADDRESSES) as file:
         for line in file:
             item = json.loads(line)
-            addr = transform.create_hash_BR_RJ(item)
+            addr = transform.create_hash_KR_41(item)
             try:
                 addrs.insert_one(addr)
                 count += 1
