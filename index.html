@@ -302,7 +302,7 @@
             }
             else{
               var div = document.createElement("div");
-              var str = "No address found!"
+              var str = "No address found"
               div.innerHTML = str
               document.getElementById("res").appendChild(div);
             }
@@ -352,7 +352,7 @@
             }
             else{
               var div = document.createElement("div");
-              var str = "No address found!"
+              var str = "No address found"
               div.innerHTML = str
               document.getElementById("res").appendChild(div);
             }
@@ -446,8 +446,8 @@
     <option value="canada">Canada</option>
     </select>
     <br>
-    Enter address field(s): <br><br><input id="countryPartialAddress" type = "text" size="200"><br><br>
-    <button onclick="countrySpecificSearch()" id="submit_btn2">Search Partial Address</button>
+    Enter address line: <br><br><input id="countryPartialAddress" type = "text" size="150"><br><br>
+    <button onclick="countrySpecificSearch()" id="submit_btn2">Search</button>
     <button onclick="reset_input()" id = 'reset_input'>Reset</button>
   </div>
   
@@ -489,7 +489,7 @@
     Building/House No.: <input id="bhn" name="bhn" style=" width: 10%" type="text" autocomplete="off" disabled="true">
     Apt/Suite: <input id="as" name="as" style=" width: 10%" type="text" autocomplete="off" disabled="true">
     Zip: <input id="zip" name="zip" style=" width: 10%" type="text" autocomplete="off" disabled="true">
-    POB: <input id="pob" name="pob" style=" width: 10%" type="text" autocomplete="off" disabled="true">
+    P.O. Box: <input id="pob" name="pob" style=" width: 10%" type="text" autocomplete="off" disabled="true">
   </P>
   <button onclick="generate_searchCountries()" id='submit_btn'>Search</button>
   <button onclick="reset_input()" id = 'reset_input'>Reset</button>
