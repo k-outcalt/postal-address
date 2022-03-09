@@ -4,6 +4,13 @@ RESTful API for postal address project
 3.9.22
 """
 from flask import Flask, request, jsonify
+from flask_cors import CORS
+from flask_restplus import Api, Resource, fields
+from bson.errors import InvalidId
+from bson.objectid import ObjectId
+import json
+import re
+import pymongo
 # request is the request object from the client
 # jsonify wraps texts/dictionaries in a json
 
