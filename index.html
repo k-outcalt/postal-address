@@ -7,20 +7,11 @@
       background-color: white;
       color: black;
     }
-    
-    .dark-mode {
-      background-color: rgb(49, 49, 49);
-      color: white;
-    }
     </style>
   
     <script>
       console.log("Start");
   
-      function darkMode() {
-        var element = document.body;
-        element.classList.toggle("dark-mode");
-      }
       function merge_array(res, country){
         for (const element of country) {
             res.push(element);
@@ -434,21 +425,44 @@
 </head>
 
 <body>
+    
 
-  <h2 align="center">Address Search</h2>
-  <button onclick="darkMode()">dark mode</button>
-  <h2>Select a country(ies):</h2>
+  <h2 align="center">Postal Address Search</h2>
+
+  <div>
+    <h2>Partial Address Search:</h2>
+    Select a country: <select name="countries" id="countries"><br><br>
+    <option value="----">----</option>
+    <option value="usa">USA</option>
+    <option value="brazil">Brazil</option>
+    <option value="japan">Japan</option>
+    <option value="southkorea">South Korea</option>
+    <option value="northkorea">North Korea</option>
+    <option value="uk">UK</option>
+    <option value="germany">Germany</option>
+    <option value="india">India</option>
+    <option value="spain">Spain</option>
+    <option value="mexico">Mexico</option>
+    <option value="canada">Canada</option>
+    </select>
+    <br>
+    Enter address field(s): <br><br><input id="countryPartialAddress" type = "text" size="200"><br><br>
+    <button onclick="countrySpecificSearch()" id="submit_btn2">Search Partial Address</button>
+    <button onclick="reset_input()" id = 'reset_input'>Reset</button>
+  </div>
+  
+  <h2>Select a country:</h2>
   <table>
     <tr>
-      <td width="90">USA:<input type="checkbox" id="usa" name="usa" class="form-control" onclick="set_text_input()"></td>
-      <td width="90">Canada:<input type="checkbox" id="canada" name="canada" class="form-control" onclick="set_text_input()"><br></td>
-      <td width="90">Japan:<input type="checkbox" id="japan" name="japan" class="form-control" onclick="set_text_input()"></td>
-      <td width="90">Germany:<input type="checkbox" id="germany" name="germany" class="form-control" onclick="set_text_input()"></td>
-      <td width="110">South Korea:<input type="checkbox" id="skorea" name="nskorea" class="form-control" onclick="set_text_input()"></td>
+      <td>United States:<input type="checkbox" id="usa" name="usa" class="form-control" onclick="set_text_input()"></td>
+      <td>Canada:<input type="checkbox" id="canada" name="canada" class="form-control" onclick="set_text_input()"><br></td>
+      <td>Japan:<input type="checkbox" id="japan" name="japan" class="form-control" onclick="set_text_input()"></td>
+      <td>Germany:<input type="checkbox" id="germany" name="germany" class="form-control" onclick="set_text_input()"></td>
+      <td>South Korea:<input type="checkbox" id="skorea" name="nskorea" class="form-control" onclick="set_text_input()"></td>
       <td>India:<input type="checkbox" id="india" name="india" class="form-control" onclick="set_text_input()"></td>    
     </tr>
     <tr>
-      <td>UK:<input type="checkbox" id="uk" name="uk" class="form-control" onclick="set_text_input()"></td>
+      <td>United Kingdom:<input type="checkbox" id="uk" name="uk" class="form-control" onclick="set_text_input()"></td>
       <td>Spain:<input type="checkbox" id="spain" name="spain" class="form-control" onclick="set_text_input()"></td>
       <td>Brazil:<input type="checkbox" id="brazil" name="brazil" class="form-control" onclick="set_text_input()"></td>
       <td>Mexico:<input type="checkbox" id="mexico" name="mexico" class="form-control" onclick="set_text_input()"><br></td>
@@ -456,15 +470,7 @@
     </tr>
   </table>
 
-
-
-  <h2>Provide a name:</h2>
-  <p>
-    First Name: <input id="fname" name="fname" style=" width: 10%" type="text" placeholder="" autocomplete="off">
-    Last Name: <input id="lname" name="lname" style=" width: 10%" type="text" placeholder="" autocomplete="off">
-  </p>
-
-  <h2>Provide a partial address(es)</h2>
+  <h2>Fill out address fields:</h2>
   <P>
     State: <input id="state" name="state" style=" width: 10%" type="text" autocomplete="off" disabled="true">
     Province: <input id="province" name="province" style=" width: 10%" type="text" autocomplete="off" disabled="true">
@@ -489,29 +495,8 @@
   <button onclick="reset_input()" id = 'reset_input'>Reset</button>
   <input type="hidden" id="searchCountries" name="searchCounties" value="">
 
-  <div>
-    <h2>Enter country specific partial address</h2>
-    Select Country: <select name="countries" id="countries"><br><br>
-    <option value="----">----</option>
-    <option value="usa">USA</option>
-    <option value="brazil">Brazil</option>
-    <option value="japan">Japan</option>
-    <option value="southkorea">South Korea</option>
-    <option value="northkorea">North Korea</option>
-    <option value="uk">UK</option>
-    <option value="germany">Germany</option>
-    <option value="india">India</option>
-    <option value="spain">Spain</option>
-    <option value="mexico">Mexico</option>
-    <option value="canada">Canada</option>
-    </select>
-    <br>
-    Country Specific Partial Address: <br><br><input id="countryPartialAddress" type = "text" size="200"><br><br>
-    <button onclick="countrySpecificSearch()" id="submit_btn2">Search Partial Address</button>
-    <button onclick="reset_input()" id = 'reset_input'>Reset</button>
-  </div>
 
-  <h2>Search results:</h2>
+  <h2>Result(s):</h2>
   <div id="res"></div>
 </body>
 </html>
