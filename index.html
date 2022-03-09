@@ -425,31 +425,8 @@
 </head>
 
 <body>
-    
 
   <h2 align="center">Postal Address Search</h2>
-
-  <div>
-    <h2>Partial address search:</h2>
-    Select a country: <select name="countries" id="countries"><br><br>
-    <option value="----">----</option>
-    <option value="usa">USA</option>
-    <option value="brazil">Brazil</option>
-    <option value="japan">Japan</option>
-    <option value="southkorea">South Korea</option>
-    <option value="northkorea">North Korea</option>
-    <option value="uk">UK</option>
-    <option value="germany">Germany</option>
-    <option value="india">India</option>
-    <option value="spain">Spain</option>
-    <option value="mexico">Mexico</option>
-    <option value="canada">Canada</option>
-    </select>
-    <br>
-    Enter address line: <br><br><input id="countryPartialAddress" type = "text" size="100"><br><br>
-    <button onclick="countrySpecificSearch()" id="submit_btn2">Search</button>
-    <button onclick="reset_input()" id = 'reset_input'>Reset</button>
-  </div>
   
   <h2>Select a country:</h2>
   <table>
@@ -496,6 +473,27 @@
   <input type="hidden" id="searchCountries" name="searchCounties" value="">
 
 
+  <div>
+    <h2>Partial address search:</h2>
+    Select a country: <select name="countries" id="countries"><br><br>
+    <option value="----">----</option>
+    <option value="usa">United States</option>
+    <option value="brazil">Brazil</option>
+    <option value="japan">Japan</option>
+    <option value="southkorea">South Korea</option>
+    <option value="northkorea">North Korea</option>
+    <option value="uk">United Kingdom</option>
+    <option value="germany">Germany</option>
+    <option value="india">India</option>
+    <option value="spain">Spain</option>
+    <option value="mexico">Mexico</option>
+    <option value="canada">Canada</option>
+    </select>
+    <br>
+    Enter address line: <br><br><input id="countryPartialAddress" type = "text" size="100"><br><br>
+    <button onclick="countrySpecificSearch()" id="submit_btn2">Search</button>
+    <button onclick="reset_input()" id = 'reset_input'>Reset</button>
+  </div>
   <h2>Result(s):</h2>
   <div id="res"></div>
 </body>
