@@ -13,29 +13,50 @@ from socket import AddressInfo
 import transform
 import pymongo
 
-RAW_ADDRESSES = 'sample_group.geojson'
+RAW_ADDRESSES = 'br_rj_rio_de_janeiro-addresses-city.geojson'
 MONGO_CONNECTION_STR = ''
 ADDR_LIMIT = 1500
 
+def test_hash(limit=10):
+    count = 0
+    with open(RAW_ADDRESSES) as file:
+        for line in file:
+            item = json.loads(line)
+            #print(item)
+
+            addr = transform.create_hash_CA_BC(item)
+            
+            print(addr)
+            count += 1
+            if count >= limit:
+                break
+
+
 def populate_cluster(limit):
     # connect to MongoDB
-    count = 0
     client = pymongo.MongoClient(MONGO_CONNECTION_STR)
     db = client.addressDB
     addrs = db.address
 
     # geojson => json => insert document
+    count = 0
     with open(RAW_ADDRESSES) as file:
         for line in file:
             item = json.loads(line)
-            addr = transform.create_hash_US_WA(item)
-            addrs.insert_one(addr)
+            addr = transform.create_hash_BR_RJ(item)
+            try:
+                addrs.insert_one(addr)
+                count += 1
+            except pymongo.errors.DuplicateKeyError:
+                continue
 
-            count += 1
+            if count % 100 == 0:
+                print("100 addresses recorded, total: ", count)
             if count >= limit:
                 break
 
 
 if __name__ == "__main__":
     populate_cluster(ADDR_LIMIT)
+    # test_hash(10)
 
