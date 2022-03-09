@@ -33,3 +33,8 @@ def create_hash_US_WA(gj):
         NO: gj[PROP]["number"]
     }
 
+def create_hash_BR_RJ(gj):
+    """
+    >>> create_hash_BR_RJ({"type":"Feature","properties":{"id":"","unit":"","number":"35","street":"Rua Represa dos Ciganos","city":"","district":"","region":"","postcode":"","hash":"3f6437097cdb6d24"},"geometry":{"type":"Point","coordinates":[-43.3457266,-22.9563213]}})
+    {'_id': '3f6437097cdb6d24', 'country': 'BR', 'territory': 'RJ', 'city': 'Rio De Janeiro', 'postcode': '}
+    """

@@ -14,7 +14,7 @@ import transform
 import pymongo
 
 RAW_ADDRESSES = 'sample_group.geojson'
-MONGO_CONNECTION_STR = 'mongodb+srv://outcaltk-cluster:rjOBFu5GAKmsSGZ3@addresses.4q6sq.mongodb.net/addresses?retryWrites=true&w=majority'
+MONGO_CONNECTION_STR = ''
 ADDR_LIMIT = 1500
 
 def populate_cluster(limit):
