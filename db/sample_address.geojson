@@ -1,19 +1,19 @@
 {
     "type":"Feature",
-    "properties": {
-        "hash":"a61bdd50a9646a04",
-        "number":"119",
-        "street":"NW  41ST ST",
+    "properties":{
+        "id":"",
         "unit":"",
-        "city":"SEATTLE",
-        "district":"KING",
+        "number":"35",
+        "street":"Rua Represa dos Ciganos",
+        "city":"",
+        "district":"",
         "region":"",
-        "postcode":"98107",
-        "id":"324731.0"
+        "postcode":"",
+        "hash":"3f6437097cdb6d24"
     },
-    "geometry": {
+    "geometry":{
         "type":"Point",
-        "coordinates":[-122.3580529,47.6561133]
+        "coordinates":[-43.3457266,-22.9563213]
     }
 }
     
