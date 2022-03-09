@@ -243,9 +243,7 @@
           q += 'Canada '
       }
       document.getElementById('searchCountries').value = q;
-      
-      var firstName = document.getElementById("fname").value
-      var LastName = document.getElementById("lname").value
+
       var Street = document.getElementById("street").value
       var BuildingHouseNo = document.getElementById("bhn").value
       var Zip = document.getElementById("zip").value
@@ -377,8 +375,6 @@
       document.getElementById('mexico').checked = false;
       document.getElementById('canada').checked = false;
 
-      document.getElementById("fname").value = null;
-      document.getElementById("lname").value = null;
       document.getElementById("street").value = null;
       document.getElementById("bhn").value = null;
       document.getElementById("zip").value = null;
@@ -398,8 +394,6 @@
       document.getElementById("quadrant").value = null;
       document.getElementById("prefecture").value = null;
 
-      document.getElementById("fname").disabled = true;
-      document.getElementById("lname").disabled = true;
       document.getElementById("street").disabled = true;
       document.getElementById("bhn").disabled = true;
       document.getElementById("zip").disabled = true;
@@ -448,12 +442,6 @@
       <td>North Korea:<input type="checkbox" id="nkorea" name="nskorea" class="form-control" onclick="set_text_input()"></td>
     </tr>
   </table>
-
-  <h2>Enter a name:</h2>
-  <p>
-    First Name: <input id="fname" name="fname" style=" width: 10%" type="text" autocomplete="off" disabled="true">
-    Last Name: <input id="lname" name="lname" style=" width: 10%" type="text" autocomplete="off" disabled="true">
-  </p>
 
   <h2>Fill out address field(s):</h2>
   <P>
